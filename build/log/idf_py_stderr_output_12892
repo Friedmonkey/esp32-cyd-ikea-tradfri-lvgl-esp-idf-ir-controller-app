@@ -1,0 +1,2 @@
+Command: ninja flash
+ninja: error: 'C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_queue.c', needed by 'esp-idf/main/CMakeFiles/__idf_main.dir/remote_queue.c.obj', missing and no known rule to make it

@@ -1,0 +1,395 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\remote_display_tradfri_controller\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/remote_display_tradfri_controller.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/remote_display_tradfri_controller.c.obj 
+ccache C:\Espressif\tools\xtensa-esp-elf\esp-14.2.0_20241119\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.5\" -DLV_COLOR_16_SWAP=1 -DLV_CONF_INCLUDE_SIMPLE -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/build/config -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/lvgl_ui_export -IC:/Espressif/frameworks/esp-idf-v5.5/components/newlib/platform_include -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/config/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/config/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/config/xtensa/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/FreeRTOS-Kernel/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.5/components/freertos/esp_additions/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/include/soc -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/include/soc/esp32 -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/dma/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/ldo/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/debug_probe/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/mspi_timing_tuning/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/power_supply/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/port/esp32/. -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support/port/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/heap/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/heap/tlsf -IC:/Espressif/frameworks/esp-idf-v5.5/components/log/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/soc/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/soc/esp32 -IC:/Espressif/frameworks/esp-idf-v5.5/components/soc/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/soc/esp32/register -IC:/Espressif/frameworks/esp-idf-v5.5/components/hal/platform_port/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/hal/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/hal/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/include/esp32 -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32 -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_common/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_system/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_system/port/soc -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_system/port/include/private -IC:/Espressif/frameworks/esp-idf-v5.5/components/xtensa/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/xtensa/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/xtensa/deprecated_include -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/include/apps -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/include/apps/sntp -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/lwip/src/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/port/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/port/freertos/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/port/esp32xx/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/port/esp32xx/include/arch -IC:/Espressif/frameworks/esp-idf-v5.5/components/lwip/port/esp32xx/include/sys -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_gpio/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_pm/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/port/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/mbedtls/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/mbedtls/library -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/esp_crt_bundle/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/Espressif/frameworks/esp-idf-v5.5/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_app_format/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/app_update/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/bootloader_flash/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_partition/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/efuse/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/efuse/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_mm/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/spi_flash/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_security/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/pthread/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_timer/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_gptimer/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_ringbuf/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_uart/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/vfs/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/app_trace/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_event/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/nvs_flash/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_phy/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_phy/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_usb_serial_jtag/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_vfs_console/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_netif/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/wpa_supplicant/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/wpa_supplicant/port/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/wpa_supplicant/esp_supplicant/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_coex/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_wifi/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_wifi/include/local -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_wifi/wifi_apps/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_wifi/wifi_apps/nan_app/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_spi/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_gdbstub/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/unity/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/unity/unity/src -IC:/Espressif/frameworks/esp-idf-v5.5/components/cmock/CMock/src -IC:/Espressif/frameworks/esp-idf-v5.5/components/console -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_pcnt/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_mcpwm/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_ana_cmpr/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_i2s/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_sdspi/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_sdio/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_dac/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_bitscrambler/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_rmt/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_tsens/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_sdm/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_i2c/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_ledc/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_parlio/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_twai/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/driver/deprecated -IC:/Espressif/frameworks/esp-idf-v5.5/components/driver/i2c/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/driver/touch_sensor/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/driver/twai/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/driver/touch_sensor/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/http_parser -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp-tls -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp-tls/esp-tls-crypto -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_adc/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_adc/interface -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_adc/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_adc/deprecated/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_isp/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_cam/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_cam/interface -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_psram/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_jpeg/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_ppa/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_touch_sens/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_touch_sens/hw_ver1/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_eth/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_hid/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/tcp_transport/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_http_client/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_http_server/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_https_ota/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_https_server/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_lcd/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_lcd/interface -IC:/Espressif/frameworks/esp-idf-v5.5/components/protobuf-c/protobuf-c -IC:/Espressif/frameworks/esp-idf-v5.5/components/protocomm/include/common -IC:/Espressif/frameworks/esp-idf-v5.5/components/protocomm/include/security -IC:/Espressif/frameworks/esp-idf-v5.5/components/protocomm/include/transports -IC:/Espressif/frameworks/esp-idf-v5.5/components/protocomm/include/crypto/srp6a -IC:/Espressif/frameworks/esp-idf-v5.5/components/protocomm/proto-c -IC:/Espressif/frameworks/esp-idf-v5.5/components/esp_local_ctrl/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/espcoredump/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/espcoredump/include/port/xtensa -IC:/Espressif/frameworks/esp-idf-v5.5/components/wear_levelling/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/fatfs/diskio -IC:/Espressif/frameworks/esp-idf-v5.5/components/fatfs/src -IC:/Espressif/frameworks/esp-idf-v5.5/components/fatfs/vfs -IC:/Espressif/frameworks/esp-idf-v5.5/components/idf_test/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/idf_test/include/esp32 -IC:/Espressif/frameworks/esp-idf-v5.5/components/ieee802154/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/json/cJSON -IC:/Espressif/frameworks/esp-idf-v5.5/components/mqtt/esp-mqtt/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/nvs_sec_provider/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/perfmon/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/rt/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/spiffs/include -IC:/Espressif/frameworks/esp-idf-v5.5/components/wifi_provisioning/include -IC:/Espressif/frameworks/esp-idf-v5.5/examples/common_components/protocol_examples_common/include -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/espressif__esp_lcd_touch/include -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/atanisoft__esp_lcd_touch_xpt2046/include -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/espressif__esp_lcd_ili9341/include -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/lvgl__lvgl -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/lvgl__lvgl/src -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/lvgl__lvgl/examples -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/lvgl__lvgl/demos -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/espressif__esp_lvgl_port/include -IC:/Users/marti/Documents/esp-projects/.libraries/fried_esp_cyd_screen_lvgl8/include -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/espressif__coap/port/include -IC:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/managed_components/espressif__coap/libcoap/include -IC:/Users/marti/Documents/esp-projects/.libraries/fried_coaps_client/include -IC:/Users/marti/Documents/esp-projects/.libraries/fdata/include -IC:/Users/marti/Documents/esp-projects/.libraries/fried_tradfri_client/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller=. -fmacro-prefix-map=C:/Espressif/frameworks/esp-idf-v5.5=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -DESP_LCD_ILI9341_VER_MAJOR=2 -DESP_LCD_ILI9341_VER_MINOR=0 -DESP_LCD_ILI9341_VER_PATCH=1 -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/remote_display_tradfri_controller.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\remote_display_tradfri_controller.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/remote_display_tradfri_controller.c.obj -c C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:61: warning: excess elements in union initializer
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                                             ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:61: note: (near initialization for 'c_Red')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:72: warning: excess elements in union initializer
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                                                        ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:72: note: (near initialization for 'c_Red')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:33:42: error: missing braces around initializer [-Werror=missing-braces]
+   33 | static const lv_color_t c_Red          = { .red=255, .green=0,   .blue=0 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   34 | static const lv_color_t c_Green        = { .red=0,   .green=255, .blue=0 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   34 | static const lv_color_t c_Green        = { .red=0,   .green=255, .blue=0 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:61: warning: excess elements in union initializer
+   34 | static const lv_color_t c_Green        = { .red=0,   .green=255, .blue=0 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:61: note: (near initialization for 'c_Green')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   34 | static const lv_color_t c_Green        = { .red=0,   .green=255, .blue=0 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:72: warning: excess elements in union initializer
+   34 | static const lv_color_t c_Green        = { .red=0,   .green=255, .blue=0 };
+      |                                                                        ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:72: note: (near initialization for 'c_Green')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:34:42: error: missing braces around initializer [-Werror=missing-braces]
+   34 | static const lv_color_t c_Green        = { .red=0,   .green=255, .blue=0 };
+      |                                          ^
+      |                                                 {}
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   35 | static const lv_color_t c_Blue         = { .red=0,   .green=0,   .blue=255 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   35 | static const lv_color_t c_Blue         = { .red=0,   .green=0,   .blue=255 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:61: warning: excess elements in union initializer
+   35 | static const lv_color_t c_Blue         = { .red=0,   .green=0,   .blue=255 };
+      |                                                             ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:61: note: (near initialization for 'c_Blue')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   35 | static const lv_color_t c_Blue         = { .red=0,   .green=0,   .blue=255 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:72: warning: excess elements in union initializer
+   35 | static const lv_color_t c_Blue         = { .red=0,   .green=0,   .blue=255 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:72: note: (near initialization for 'c_Blue')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:35:42: error: missing braces around initializer [-Werror=missing-braces]
+   35 | static const lv_color_t c_Blue         = { .red=0,   .green=0,   .blue=255 };
+      |                                          ^
+      |                                                 {}
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:61: warning: excess elements in union initializer
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:61: note: (near initialization for 'c_White')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:72: warning: excess elements in union initializer
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:72: note: (near initialization for 'c_White')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:36:42: error: missing braces around initializer [-Werror=missing-braces]
+   36 | static const lv_color_t c_White        = { .red=255, .green=255, .blue=255 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:61: warning: excess elements in union initializer
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:61: note: (near initialization for 'c_Orange')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:72: warning: excess elements in union initializer
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                                                        ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:72: note: (near initialization for 'c_Orange')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:37:42: error: missing braces around initializer [-Werror=missing-braces]
+   37 | static const lv_color_t c_Orange       = { .red=255, .green=165, .blue=0 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   38 | static const lv_color_t c_Lime         = { .red=0,   .green=255, .blue=0 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   38 | static const lv_color_t c_Lime         = { .red=0,   .green=255, .blue=0 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:61: warning: excess elements in union initializer
+   38 | static const lv_color_t c_Lime         = { .red=0,   .green=255, .blue=0 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:61: note: (near initialization for 'c_Lime')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   38 | static const lv_color_t c_Lime         = { .red=0,   .green=255, .blue=0 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:72: warning: excess elements in union initializer
+   38 | static const lv_color_t c_Lime         = { .red=0,   .green=255, .blue=0 };
+      |                                                                        ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:72: note: (near initialization for 'c_Lime')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:38:42: error: missing braces around initializer [-Werror=missing-braces]
+   38 | static const lv_color_t c_Lime         = { .red=0,   .green=255, .blue=0 };
+      |                                          ^
+      |                                                 {}
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   39 | static const lv_color_t c_Blue2        = { .red=0,   .green=0,   .blue=255 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   39 | static const lv_color_t c_Blue2        = { .red=0,   .green=0,   .blue=255 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:61: warning: excess elements in union initializer
+   39 | static const lv_color_t c_Blue2        = { .red=0,   .green=0,   .blue=255 };
+      |                                                             ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:61: note: (near initialization for 'c_Blue2')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   39 | static const lv_color_t c_Blue2        = { .red=0,   .green=0,   .blue=255 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:72: warning: excess elements in union initializer
+   39 | static const lv_color_t c_Blue2        = { .red=0,   .green=0,   .blue=255 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:72: note: (near initialization for 'c_Blue2')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:39:42: error: missing braces around initializer [-Werror=missing-braces]
+   39 | static const lv_color_t c_Blue2        = { .red=0,   .green=0,   .blue=255 };
+      |                                          ^
+      |                                                 {}
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:61: warning: excess elements in union initializer
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:61: note: (near initialization for 'c_LightOrange')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:72: warning: excess elements in union initializer
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:72: note: (near initialization for 'c_LightOrange')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:40:42: error: missing braces around initializer [-Werror=missing-braces]
+   40 | static const lv_color_t c_LightOrange  = { .red=255, .green=200, .blue=150 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '135' to '7' [-Woverflow]
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:61: warning: excess elements in union initializer
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:61: note: (near initialization for 'c_Skyblue')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:72: warning: excess elements in union initializer
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:72: note: (near initialization for 'c_Skyblue')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:41:42: error: missing braces around initializer [-Werror=missing-braces]
+   41 | static const lv_color_t c_Skyblue      = { .red=135, .green=206, .blue=235 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '75' to '3' [-Woverflow]
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                                 ^~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:61: warning: excess elements in union initializer
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                                             ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:61: note: (near initialization for 'c_DarkPurple')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:72: warning: excess elements in union initializer
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:72: note: (near initialization for 'c_DarkPurple')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:42:42: error: missing braces around initializer [-Werror=missing-braces]
+   42 | static const lv_color_t c_DarkPurple   = { .red=75,  .green=0,   .blue=130 };
+      |                                          ^
+      |                                                 { }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:61: warning: excess elements in union initializer
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:61: note: (near initialization for 'c_YellowOrange')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:72: warning: excess elements in union initializer
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                                                        ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:72: note: (near initialization for 'c_YellowOrange')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:43:42: error: missing braces around initializer [-Werror=missing-braces]
+   43 | static const lv_color_t c_YellowOrange = { .red=255, .green=200, .blue=0 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   44 | static const lv_color_t c_CyanLight    = { .red=0,   .green=255, .blue=255 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   44 | static const lv_color_t c_CyanLight    = { .red=0,   .green=255, .blue=255 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:61: warning: excess elements in union initializer
+   44 | static const lv_color_t c_CyanLight    = { .red=0,   .green=255, .blue=255 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:61: note: (near initialization for 'c_CyanLight')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   44 | static const lv_color_t c_CyanLight    = { .red=0,   .green=255, .blue=255 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:72: warning: excess elements in union initializer
+   44 | static const lv_color_t c_CyanLight    = { .red=0,   .green=255, .blue=255 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:72: note: (near initialization for 'c_CyanLight')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:44:42: error: missing braces around initializer [-Werror=missing-braces]
+   44 | static const lv_color_t c_CyanLight    = { .red=0,   .green=255, .blue=255 };
+      |                                          ^
+      |                                                 {}
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:61: warning: excess elements in union initializer
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:61: note: (near initialization for 'c_Purple')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:72: warning: excess elements in union initializer
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:72: note: (near initialization for 'c_Purple')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:46:42: error: missing braces around initializer [-Werror=missing-braces]
+   46 | static const lv_color_t c_Purple       = { .red=255, .green=255, .blue=255 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:61: warning: excess elements in union initializer
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:61: note: (near initialization for 'c_Yellow')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:72: warning: excess elements in union initializer
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                                                        ^
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:72: note: (near initialization for 'c_Yellow')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:47:42: error: missing braces around initializer [-Werror=missing-braces]
+   47 | static const lv_color_t c_Yellow       = { .red=255, .green=255, .blue=0 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   48 | static const lv_color_t c_CyanDark     = { .red=0,   .green=128, .blue=128 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   48 | static const lv_color_t c_CyanDark     = { .red=0,   .green=128, .blue=128 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:61: warning: excess elements in union initializer
+   48 | static const lv_color_t c_CyanDark     = { .red=0,   .green=128, .blue=128 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:61: note: (near initialization for 'c_CyanDark')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   48 | static const lv_color_t c_CyanDark     = { .red=0,   .green=128, .blue=128 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:72: warning: excess elements in union initializer
+   48 | static const lv_color_t c_CyanDark     = { .red=0,   .green=128, .blue=128 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:72: note: (near initialization for 'c_CyanDark')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:48:42: error: missing braces around initializer [-Werror=missing-braces]
+   48 | static const lv_color_t c_CyanDark     = { .red=0,   .green=128, .blue=128 };
+      |                                          ^
+      |                                                 {}
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:45: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:49: warning: unsigned conversion from 'int' to 'unsigned char:3' changes value from '255' to '7' [-Woverflow]
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                                 ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:55: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                                       ^~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:61: warning: excess elements in union initializer
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                                             ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:61: note: (near initialization for 'c_Pink')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:67: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                                                   ^~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:72: warning: excess elements in union initializer
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                                                        ^~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:72: note: (near initialization for 'c_Pink')
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:49:42: error: missing braces around initializer [-Werror=missing-braces]
+   49 | static const lv_color_t c_Pink         = { .red=255, .green=192, .blue=203 };
+      |                                          ^
+      |                                                 {  }
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c: In function 'SetColorFromColor':
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:151:19: warning: unused variable 'screen' [-Wunused-variable]
+  151 |         lv_obj_t* screen = lv_scr_act();
+      |                   ^~~~~~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c: In function 'my_nec_callback':
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:253:25: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'red'
+  253 |             SetColor(col->red, col->green, col->blue, 10);
+      |                         ^~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:253:35: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'green'
+  253 |             SetColor(col->red, col->green, col->blue, 10);
+      |                                   ^~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:253:47: error: 'lv_color_t' {aka 'const lv_color16_t'} has no member named 'blue'
+  253 |             SetColor(col->red, col->green, col->blue, 10);
+      |                                               ^~
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c: At top level:
+C:/Users/marti/Documents/esp-projects/remote_display_tradfri_controller/main/remote_display_tradfri_controller.c:19:20: warning: 'TRADFRI_TAG' defined but not used [-Wunused-variable]
+   19 | static const char* TRADFRI_TAG = "FRIED_DISPLAY_TRADFRI_CONTROLLER";
+      |                    ^~~~~~~~~~~
+cc1.exe: some warnings being treated as errors
+ninja: build stopped: subcommand failed.
