@@ -279,17 +279,18 @@ void on_brightness_read(const char* deviceId, uint8_t brightness)
 {
     printf("Brightness of %s is %u\n", deviceId, brightness);
 	last_known_brightness = brightness;
+	lv_scr_load(ui_app_screen);
 }
 
 
 void app_main(void)
 {
+	queue_init();
     fs_init();
 	fs_set_brightness(25);
 	
 	//squareline studio ui init func
 	ui_init();
-	queue_init();
 	remote_queue_init(my_nec_callback);
 
 	enqueue_get_brightness(c_deviceId, on_brightness_read);
