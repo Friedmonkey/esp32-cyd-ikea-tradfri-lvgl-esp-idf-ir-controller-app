@@ -15,9 +15,14 @@
 
 #include <math.h>
 #include <stdint.h>
+#include <string.h>
+
 
 static const char* TRADFRI_TAG = "FRIED_DISPLAY_TRADFRI_CONTROLLER";
+const char* c_deviceId = "65574";
+const uint8_t brightness_factor = 15;
 static uint8_t transitionTime = 5;
+static uint8_t last_known_brightness = 50;
 
 
 static const char* commandNames[] = {
@@ -140,10 +145,9 @@ void rgb_to_xy_uint16(uint16_t r_in, uint16_t g_in, uint16_t b_in, uint16_t* x, 
 
 static void SetTradfriColor(uint8_t r, uint8_t g, uint8_t b, uint8_t t)
 {
-	const char* deviceId = "65574";
 	uint16_t x,y;
 	rgb_to_xy_uint16(r, g, b, &x, &y);
-	enqueue_set_color(deviceId, x, y, t);
+	enqueue_set_color(c_deviceId, x, y, t);
 }
 static void SetColor(uint8_t r, uint8_t g, uint8_t b, uint8_t t)
 {
@@ -218,6 +222,25 @@ void changeColorBlue(lv_event_t* e)
 	SetColor(0, 0, 255, transitionTime);
 }
 
+void IncreaseBrightness()
+{
+    int new_brightness = last_known_brightness + brightness_factor;
+    if (new_brightness > 254) new_brightness = 254;
+    last_known_brightness = new_brightness;
+
+    enqueue_set_brightness(c_deviceId, last_known_brightness, 5);
+}
+
+void DecreaseBrightness()
+{
+    int new_brightness = last_known_brightness - brightness_factor;
+    if (new_brightness < 0) new_brightness = 0;
+    last_known_brightness = new_brightness;
+
+    enqueue_set_brightness(c_deviceId, last_known_brightness, 5);
+}
+
+
 
 static void my_nec_callback(uint16_t address, uint16_t command, bool repeat)
 {
@@ -225,14 +248,39 @@ static void my_nec_callback(uint16_t address, uint16_t command, bool repeat)
 
     if (!repeat && cmd8 <= 0x17) {
         const simple_rgb_t* col = colorCommands[cmd8];
+		const char *commandName = commandNames[cmd8];
         if (col) {
-            ESP_LOGI("NEC", "Setting color to: %s", commandNames[cmd8]);
+            ESP_LOGI("NEC", "Setting color to: %s", commandName);
             SetColor(col->r, col->g, col->b, 10);
         } else {
-            ESP_LOGI("NEC", "Non-color command: %s", commandNames[cmd8]);
+            ESP_LOGI("NEC", "Non-color command: %s", commandName);
+			if (strcmp(commandName, "Bright+") == 0)
+			{
+				IncreaseBrightness();
+			}
+			else if (strcmp(commandName, "Bright-") == 0)
+			{
+				DecreaseBrightness();
+			}
+			else if (strcmp(commandName, "Power On") == 0)
+			{
+				enqueue_set_power(c_deviceId, true);
+			}
+			else if (strcmp(commandName, "Power Off") == 0)
+			{
+				enqueue_set_power(c_deviceId, false);
+			}
+
         }
     }
 }
+
+void on_brightness_read(const char* deviceId, uint8_t brightness)
+{
+    printf("Brightness of %s is %u\n", deviceId, brightness);
+	last_known_brightness = brightness;
+}
+
 
 void app_main(void)
 {
@@ -243,4 +291,6 @@ void app_main(void)
 	ui_init();
 	queue_init();
 	remote_queue_init(my_nec_callback);
+
+	enqueue_get_brightness(c_deviceId, on_brightness_read);
 }
